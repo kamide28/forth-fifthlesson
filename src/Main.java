@@ -21,15 +21,15 @@ public class Main {
         System.out.println(namesorted);
 
         System.out.println("営業部配属");
-        final String sales = "Sales";
+        final String SALES = "Sales";
         List<NewEmployee>salesemployee = newEmployees.stream()
-                .filter(employee -> sales.equals(employee.getDepartment()))
+                .filter(employee -> SALES.equals(employee.getDepartment()))
                 .toList();
         System.out.println(salesemployee);
 
         System.out.println("営業部配属の人数は");
         long salesnum = newEmployees.stream()
-                        .filter(num -> sales.equals(num.getDepartment()))
+                        .filter(num -> SALES.equals(num.getDepartment()))
                         .count();
         System.out.println(salesnum +"人です。");
 
